@@ -886,11 +886,15 @@ section {
 .clients {
   border-bottom-width: 15px 0;
   text-align: center;
-  color: #106eea;
+  color:black;
+}
+
+.clients h2{
+  font-weight: bold ;
 }
 
 .clients img {
-  transition: all 0.4s ease-in-out;
+  /* transition: all 0.4s ease-in-out; */
   display: inline-block;
   padding: 15px 0;
 }
