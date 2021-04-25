@@ -78,7 +78,8 @@
         main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
       }
       if (cur_pos < 300) {
-        $(".nav-menu ul:first li:first, .mobile-menu ul:first li:first").addClass('active');
+        var first_link = $(".nav-menu ul:first li:first, .mobile-menu ul:first li:first");
+        if( first_link.find("a").attr('href') == "#") first_link.addClass('active');
       }
     });
   });
