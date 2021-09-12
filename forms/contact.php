@@ -1,5 +1,5 @@
 <?php
-    $receiving_email_address = 'Service@dreamcube.tw'';
+    $receiving_email_address = 'hi@dreamcube.tw'';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
