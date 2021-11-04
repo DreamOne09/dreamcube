@@ -460,6 +460,10 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+#hero.dreamer {
+  background: url("../img/about.jpg") !important;
+}
+
 #hero:before {
   content: "";
   background: rgba(255, 255, 255, 0.6);
@@ -576,6 +580,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 120vh;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Sections General
