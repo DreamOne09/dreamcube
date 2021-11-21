@@ -243,7 +243,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-.nav-menu > ul > li > a:before {
+.nav-menu > ul > li > a:before,
+.mobile-nav > ul > li > a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -256,12 +257,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before,
+.mobile-nav a:hover:before, .mobile-nav li:hover > a:before, .mobile-nav .active > a:before {
   visibility: visible;
   width: 100%;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a ,
+.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
   color: #106eea;
 }
 
@@ -376,6 +379,7 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
   border-radius: 10px;
   padding: 10px 0;
+  margin: 20px;
 }
 
 .mobile-nav * {
@@ -388,9 +392,13 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   position: relative;
   color: #222222;
-  padding: 10px 20px;
   font-weight: 500;
   outline: none;
+  width: fit-content ;
+}
+
+.mobile-nav li {
+  padding: 10px 20px;
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
@@ -400,7 +408,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav .drop-down > a:after {
   content: "\ea99";
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: IcoFont, 'Noto Sans TC', sans-serif;
   padding-left: 10px;
   position: absolute;
   right: 15px;
@@ -912,7 +920,8 @@ section {
 
 .main-timeline .timeline {
   margin-bottom: 40px;
-  position: relative
+  position: relative;
+  align-items: center;
 }
 
 .main-timeline .timeline:after {
@@ -967,7 +976,6 @@ section {
 .main-timeline .date-content {
   width: 50%;
   float: left;
-  margin-top: 22px;
   position: relative
 }
 
@@ -1061,6 +1069,10 @@ section {
 
 .main-timeline .description {
   margin-bottom: 0
+}
+
+.main-timeline .timeline:nth-child(2n) {
+  flex-direction: row-reverse;
 }
 
 .main-timeline .timeline:nth-child(2n) .date-content {
@@ -1641,6 +1653,9 @@ section {
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .pricing .box h3 {
@@ -1702,6 +1717,7 @@ section {
   padding: 20px 15px;
   background: #f8f8f8;
   text-align: center;
+  margin-top: auto;
 }
 
 .pricing .btn-buy {
